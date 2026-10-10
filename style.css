@@ -1,5 +1,6 @@
 :root{--c:#00f0ff;--c2:#b8fbff;--bg:#02060f;--bg2:#041425;--card:rgba(6,24,42,.72);--txt:#e8f6ff;--mut:#8fb4c4;--g:#6bff9c;--y:#ffd23c;--r:#ff4d6d;--line:rgba(0,240,255,.28)}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:var(--c)}
@@ -95,8 +96,10 @@ details p{color:var(--mut);margin:10px 0 0}
 .box h2{margin-top:14px}.box .cta{justify-content:center}.box .meta{justify-content:center}
 .note{max-width:560px;margin:22px auto 0;font-size:13px;color:var(--mut)}
 footer{padding:36px 0;text-align:center;color:var(--mut);font-size:14px;border-top:1px solid rgba(0,240,255,.14)}
-/* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+/* reveal — progressive enhancement: el contenido es visible por defecto; solo se oculta si JS marca html.rv-on */
+.rv{opacity:1;transform:none}
+html.rv-on .rv:not(.in){opacity:0;transform:translateY(24px)}
+html.rv-on .rv{transition:opacity .7s,transform .7s}
 @media(max-width:900px){.hero .wrap,.stage{grid-template-columns:1fr}.hero .txt{text-align:center}.sub{margin:0 auto}.cta,.meta{justify-content:center}.art{order:-1;min-height:300px}.art .icon{width:240px}.art .halo{width:300px;height:300px}.bento{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}nav .links a:not(.pill){display:none}}
 @media(max-width:560px){.bento{grid-template-columns:1fr}.card.w2{grid-column:auto}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html.rv-on .rv:not(.in){opacity:1;transform:none}}
