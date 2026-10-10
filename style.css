@@ -43,15 +43,13 @@ h1 span{display:block;color:var(--c);text-shadow:0 0 24px var(--c),0 0 60px rgba
 .art .m1{width:70px;left:0;bottom:6%;animation:spin 7s linear infinite}
 .art .m2{width:46px;right:2%;top:2%;animation:spin 10s linear infinite reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
-/* runner strip */
-.runner{position:relative;height:130px;margin-top:56px;overflow:hidden;border-top:1px solid var(--line);background:linear-gradient(180deg,transparent,rgba(0,240,255,.06))}
-.runner .ground{position:absolute;left:0;right:0;bottom:0;height:34px;background:repeating-linear-gradient(90deg,rgba(0,240,255,.25) 0 2px,transparent 2px 44px),linear-gradient(180deg,rgba(0,240,255,.2),rgba(0,240,255,.03));border-top:3px solid var(--c);box-shadow:0 -4px 24px rgba(0,240,255,.6)}
-.runner .spike{position:absolute;bottom:34px;width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:34px solid var(--c);filter:drop-shadow(0 0 8px var(--c));animation:run 5s linear infinite}
-.runner .s2{animation-delay:-2.5s}
-.runner .s3{animation-delay:-1.2s;animation-duration:7s}
-@keyframes run{from{left:105%}to{left:-60px}}
-.runner .cube{position:absolute;left:18%;bottom:34px;width:34px;height:34px;background:linear-gradient(135deg,#9ffcff,#00c8e0);border:3px solid #e6ffff;border-radius:5px;box-shadow:0 0 18px var(--c);animation:jump 2.5s infinite}
-@keyframes jump{0%,55%{transform:translateY(0) rotate(0)}70%{transform:translateY(-64px) rotate(90deg)}85%{transform:translateY(-64px) rotate(180deg)}100%{transform:translateY(0) rotate(180deg)}}
+/* runner strip (minijuego) */
+.runner{position:relative;height:130px;margin-top:56px;overflow:hidden;border-top:1px solid var(--line);background:linear-gradient(180deg,transparent,rgba(0,240,255,.06));cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;outline:none}
+.runner:focus-visible{box-shadow:inset 0 0 0 2px var(--c)}
+.runner canvas{display:block;width:100%;height:130px}
+.runner .hud{position:absolute;top:10px;left:14px;right:14px;display:flex;gap:16px;justify-content:center;font-size:13px;color:var(--mut);pointer-events:none;letter-spacing:.5px}
+.runner .hud b{color:var(--c2);text-shadow:0 0 10px var(--c);margin-left:2px}
+.runner .msg{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);padding:7px 16px;border-radius:99px;background:rgba(2,6,15,.78);border:1px solid var(--c);color:var(--c2);font-size:14px;font-weight:700;white-space:nowrap;pointer-events:none;box-shadow:0 0 16px rgba(0,240,255,.4)}
 /* sections */
 section{padding:84px 0}
 .eyebrow{color:var(--c);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
@@ -96,12 +94,9 @@ details p{color:var(--mut);margin:10px 0 0}
 .box img.cb{width:96px;image-rendering:pixelated;filter:drop-shadow(0 0 18px var(--c));animation:float 4s ease-in-out infinite}
 .box h2{margin-top:14px}.box .cta{justify-content:center}.box .meta{justify-content:center}
 .note{max-width:560px;margin:22px auto 0;font-size:13px;color:var(--mut)}
-footer{padding:36px 0 110px;text-align:center;color:var(--mut);font-size:14px;border-top:1px solid rgba(0,240,255,.14)}
-/* sticky mobile bar */
-.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:none}
-.sticky .btn{width:100%;justify-content:center}
+footer{padding:36px 0;text-align:center;color:var(--mut);font-size:14px;border-top:1px solid rgba(0,240,255,.14)}
 /* reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
-@media(max-width:900px){.hero .wrap,.stage{grid-template-columns:1fr}.hero .txt{text-align:center}.sub{margin:0 auto}.cta,.meta{justify-content:center}.art{order:-1;min-height:300px}.art .icon{width:240px}.art .halo{width:300px;height:300px}.bento{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}nav .links a:not(.pill){display:none}.sticky{display:block}}
+@media(max-width:900px){.hero .wrap,.stage{grid-template-columns:1fr}.hero .txt{text-align:center}.sub{margin:0 auto}.cta,.meta{justify-content:center}.art{order:-1;min-height:300px}.art .icon{width:240px}.art .halo{width:300px;height:300px}.bento{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}nav .links a:not(.pill){display:none}}
 @media(max-width:560px){.bento{grid-template-columns:1fr}.card.w2{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}

@@ -28,13 +28,13 @@
       <p class="tag">Salta. Esquiva. Sincroniza con el neón.</p>
       <p class="sub">Un runner de scroll automático en cian sobre negro. Un toque, cero perdón: los pinchos no esperan y cada intento te acerca al 100 %.</p>
       <div class="cta">
-        <a class="btn big" id="dl-hero" href="https://gofile.io/d/cTJAuaha" target="_blank" rel="noopener">
+        <a class="btn big" id="dl-hero" href="https://gofile.io/d/0GEjekkV" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
           Descargar APK
         </a>
         <a class="btn" href="#capturas">Ver el juego</a>
       </div>
-      <div class="meta"><span>🤖 <b>Android</b></span><span>📦 <b id="size">5,4 MB</b></span><span>🎯 <b>3</b> niveles</span><span>🎨 <b>7</b> skins</span></div>
+      <div class="meta"><span>🤖 <b>Android</b></span><span>📦 <b id="size">5,4 MB</b></span><span>🎯 <b>8</b> niveles</span><span>🎨 <b>8</b> skins</span></div>
     </div>
     <div class="art">
       <div class="halo"></div>
@@ -43,17 +43,21 @@
       <img class="mini m2" src="assets/cube.png" alt="">
     </div>
   </div>
-  <div class="runner" aria-hidden="true"><div class="cube"></div><div class="spike s1" style="left:60%"></div><div class="spike s2"></div><div class="spike s3"></div><div class="ground"></div></div>
+  <div class="runner" id="runner" role="button" tabindex="0" aria-label="Minijuego: toca o pulsa espacio para saltar los pinchos">
+    <canvas id="game"></canvas>
+    <div class="hud" aria-live="polite"><span>Puntos <b id="g-score">0</b></span><span>Intentos <b id="g-tries">0</b></span></div>
+    <div class="msg" id="g-msg">⚡ Toca para jugar</div>
+  </div>
 </header>
 
 <section id="caracteristicas"><div class="wrap">
   <div class="rv"><div class="eyebrow">Características</div><h2>Todo lo que necesitas para <em>otro intento</em></h2><p class="lead">Simple de aprender, difícil de soltar.</p></div>
   <div class="bento">
-    <div class="card w2 rv"><div class="ico">🎯</div><h3>Niveles</h3><p>Tres niveles con dificultad progresiva, estrellas y porcentaje de progreso.</p>
-      <div class="tags"><span class="t-f">Neón Inicial · Fácil</span><span class="t-n">Pulso Eléctrico · Normal</span><span class="t-d">Cian Extremo · Difícil</span></div></div>
+    <div class="card w2 rv"><div class="ico">🎯</div><h3>Niveles</h3><p>8 niveles con dificultad progresiva, estrellas y porcentaje de progreso.</p>
+      <div class="tags"><span class="t-f">Neón Inicial · Fácil</span><span class="t-n">Pulso Eléctrico · Normal</span><span class="t-d">Cian Extremo · Difícil</span><span>+5 niveles más</span></div></div>
     <div class="card w2 rv"><div class="ico">💎</div><h3>Modo práctica</h3><p>Checkpoints automáticos o manuales: al morir reapareces en el último. Domina cada tramo antes de jugarlo en serio.</p></div>
-    <div class="card w2 rv"><div class="ico">🎨</div><h3>Skins</h3><p>7 skins para tu cubo: libres, por desbloqueo o comprables con las monedas que ganas al completar niveles.</p>
-      <div class="swatches"><i style="background:#00f0ff;color:#00f0ff"></i><i style="background:#6bff9c;color:#6bff9c"></i><i style="background:#ffd23c;color:#ffd23c"></i><i style="background:#ff4d6d;color:#ff4d6d"></i><i style="background:#b46bff;color:#b46bff"></i></div></div>
+    <div class="card w2 rv"><div class="ico">🎨</div><h3>Skins</h3><p>8 skins para tu cubo: libres, por desbloqueo o comprables con las monedas que ganas al completar niveles.</p>
+      <div class="swatches"><i style="background:#00f0ff;color:#00f0ff"></i><i style="background:#6bff9c;color:#6bff9c"></i><i style="background:#ffd23c;color:#ffd23c"></i><i style="background:#ff4d6d;color:#ff4d6d"></i><i style="background:#b46bff;color:#b46bff"></i><i style="background:#ff8a3c;color:#ff8a3c"></i><i style="background:#3c9bff;color:#3c9bff"></i><i style="background:#ff6bd6;color:#ff6bd6"></i></div></div>
     <div class="card w2 rv"><div class="ico">🏆</div><h3>Ranking</h3><p>Completa un nivel, escribe tu nombre y envía tu tiempo. ¿Quién llega primero a la meta?</p></div>
   </div>
 </div></section>
@@ -88,7 +92,7 @@
     <h2>Entra en la <em>zona neón</em></h2>
     <p class="lead" style="margin:0 auto 6px">Android · APK <span id="ver">debug</span></p>
     <div class="cta">
-      <a class="btn big" id="dl-gofile" href="https://gofile.io/d/cTJAuaha" target="_blank" rel="noopener">
+      <a class="btn big" id="dl-gofile" href="https://gofile.io/d/0GEjekkV" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
         Descargar en Gofile
       </a>
@@ -99,7 +103,6 @@
 </div></section>
 
 <footer><div class="wrap">⚡ Volt Dash · neón cian sobre fondo oscuro · Hecho con ganas de superar el 100 %</div></footer>
-<div class="sticky"><a class="btn big" id="dl-sticky" href="#descargar">⬇ Descargar APK</a></div>
 <script src="site-config.js"></script>
 <script src="main.js"></script>
 </body></html>
