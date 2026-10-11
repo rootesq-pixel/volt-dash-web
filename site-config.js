@@ -1,9 +1,9 @@
 // Edita aquí el enlace de descarga cuando cambie el APK.
 window.VOLT = {
-  gofile: "https://gofile.io/d/qZPdZ3yh",
+  gofile: "https://gofile.io/d/YECruIQr",
   apkLocal: null,
   version: "debug",
-  size: "5,4 MB",
-  gofilePc: "https://gofile.io/d/1TKCbpfc",
-  sizePc: "110 MB"
+  size: "25,4 MB",
+  gofilePc: "https://gofile.io/d/3A8JBcmY",
+  sizePc: "150 MB"
 };
