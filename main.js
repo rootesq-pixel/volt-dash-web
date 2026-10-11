@@ -11,6 +11,8 @@ safe('config',()=>{
  ['dl-hero','dl-gofile'].forEach(i=>set(i,e=>{if(C.gofile){e.href=C.gofile;e.target='_blank';e.rel='noopener'}}));
  document.querySelectorAll('[data-go]').forEach(a=>{a.href=C.gofile||'#descargar';if(C.gofile){a.target='_blank';a.rel='noopener'}});
  if(C.apkLocal)set('dl-local',e=>{e.href=C.apkLocal;e.hidden=false});
+ ['dl-pc','dl-pc-hero'].forEach(i=>set(i,e=>{if(C.gofilePc){e.href=C.gofilePc;e.target='_blank';e.rel='noopener'}}));
+ set('pc-size',e=>{if(C.sizePc)e.textContent=C.sizePc});
  if(C.size)set('size',e=>e.textContent=C.size);
 });
 
