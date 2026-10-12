@@ -103,3 +103,6 @@ html.rv-on .rv{transition:opacity .7s,transform .7s}
 @media(max-width:900px){.hero .wrap,.stage{grid-template-columns:1fr}.hero .txt{text-align:center}.sub{margin:0 auto}.cta,.meta{justify-content:center}.art{order:-1;min-height:300px}.art .icon{width:240px}.art .halo{width:300px;height:300px}.bento{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}nav .links a:not(.pill){display:none}}
 @media(max-width:560px){.bento{grid-template-columns:1fr}.card.w2{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html.rv-on .rv:not(.in){opacity:1;transform:none}}
+
+/* tráiler (siempre visible, sin animación de scroll) */
+#trailer{padding:56px 0 24px}#trailer .video-box{position:relative;width:100%;max-width:960px;margin:18px auto 0;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid rgba(0,240,255,.35);box-shadow:0 0 40px rgba(0,240,255,.18);background:#000}#trailer video{display:block;width:100%;height:100%;object-fit:contain;background:#000}#trailer .credit{text-align:center;font-size:13px;opacity:.75;margin-top:10px}#trailer .credit a{color:inherit}@media(max-width:600px){#trailer{padding:40px 0 12px}#trailer .video-box{border-radius:10px}}
